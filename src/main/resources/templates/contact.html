@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="https://i.pinimg.com/474x/66/6c/fb/666cfb7b1efd68bbece5c9777355531b.jpg">
+    <title>Contact - Phune CV</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.9/css/all.css">
+    <script src="https://kit.fontawesome.com/9906654b5d.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="shortcut icon" href="./favicon.ico">
+</head>
+
+<body>
+<div class="cursor"></div>
+<div class="background gradient"></div>
+<div class="page">
+    <header>
+        <nav>
+            <a href="/">
+                <span class="fas fa-user"></span>
+                <span class="link">About</span>
+            </a>
+            <a href="/resume">
+                <span class="fas fa-file"></span>
+                <span class="link">Resume</span>
+            </a>
+            <a href="/contact" class="selected">
+                <span class="fas fa-at"></span>
+                <span class="link">Contact</span>
+            </a>
+        </nav>
+    </header>
+    <main>
+        <section id="contact" class="contact view">
+            <h3 class="title">Get in Touch</h3>
+            <article class="about-services">
+                <div class="line-left">
+                    <article class="line-down">
+                        <div class="fas fa-solid fa-map-location"></div>
+                        <br>
+                        ADDRESS . . . .
+                        <span th:text="${contact.contactAddress}"></span>
+                    </article>
+                    <article class="line-down">
+                        <div class="fas fa-solid fa-envelope"></div>
+                        <br>
+                        EMAIL . . . .
+                        <span th:text="${contact.contactEmail}"></span>
+                    </article>
+                    <article class="line-down">
+                        <div class="fas fa-solid fa-phone"></div>
+                        <br>
+                        PHONE . . . .
+                        <span th:text="${contact.contactPhone}"></span>
+                    </article>
+                    <article class="line-down">
+                        <div class="fas fa-solid fa-user-plus"></div>
+                        <br>
+                        FREELANCE . . . .
+                        <span th:text="${contact.contactFreelance}"></span>
+                    </article>
+                </div>
+            </article>
+        </section>
+    </main>
+</div>
+<script type="text/javascript">
+    const cursor = document.querySelector(".cursor");
+
+    //theo doi chuot
+    document.addEventListener("mousemove", (e) => {
+        let x = e.pageX;
+        let y = e.pageY;
+
+        cursor.style.top = y + "px";
+        cursor.style.left = x + "px";
+        cursor.style.display = "block";
+    });
+
+    document.addEventListener("mouseout", () => {
+        cursor.style.display = "none";
+    });
+</script>
+</body>
+
+</html>

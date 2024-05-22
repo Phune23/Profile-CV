@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="https://i.pinimg.com/474x/66/6c/fb/666cfb7b1efd68bbece5c9777355531b.jpg">
+    <title>
+        About - Phune CV
+    </title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.9/css/all.css">
+    <script src="https://kit.fontawesome.com/9906654b5d.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="shortcut icon" href="./favicon.ico">
+</head>
+
+<body>
+<div class="cursor"></div>
+<div class="background gradient"></div>
+<div class="page">
+    <header>
+        <nav>
+            <a href="/" class="selected">
+                <span class="fas fa-user"></span>
+                <span class="link">About</span>
+            </a>
+            <a href="/resume">
+                <span class="fas fa-file"></span>
+                <span class="link">Resume</span>
+            </a>
+            <a href="/contact">
+                <span class="fas fa-at"></span>
+                <span class="link">Contact</span>
+            </a>
+        </nav>
+    </header>
+    <main>
+        <section id="about" class="about view">
+            <article class="about-aboutMe">
+                <div class="profile-background"></div>
+                <div class="profile-image">
+                    <img th:src="@{${about.imagePath}}" alt="Phu ne">
+                </div>
+                <h1 th:text="${about.nameUser}"></h1>
+                <h1 class="animationText" th:text="${about.mỵJob}"></h1>
+                <div class="social-icons">
+                    <a href="https://www.github.com/Phune23" target="_blank" rel="noreferrer">
+                        <img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/socials/github.svg" width="32" height="32" />
+                    </a>
+                    <a href="https://www.linkedin.com/in/???" target="_blank" rel="noreferrer">
+                        <img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/socials/linkedin.svg" width="32" height="32" />
+                    </a>
+                </div>
+                <h3 class="title">About Me</h3>
+                <div class="line-left">
+                    <p>
+                        <i class="fa-solid fa-earth-americas"></i>
+                         I'm based in Ho Chi Minh, VietNam. <br>
+                        <i class="fa-solid fa-laptop"></i>
+                         See my portfolio at <a href="http://github.com/Phune23" target="_blank" >Phune23.</a> <br>
+                        <i class="fa-solid fa-envelope"></i>
+                         You can contact me at phu***@gmail.com. <br>
+                        <i class="fa-solid fa-brain"></i>
+                         I'm learning Frontend Developer. <br>
+                        <i class="fa-solid fa-cloud-bolt"></i>
+                         Code and Code.
+                    </p>
+                    <hr>
+                    <p th:text="${about.mỵAbout}"></p>
+                    <hr>
+                    <div>
+                        <div>
+                            AGE . . . .
+                            <span th:text="${about.mỵAge}"></span>
+                        </div>
+                        <div>
+                            RESIDENCE . . . .
+                            <span th:text="${about.mỵResidence}"></span>
+                        </div>
+                        <div>
+                            FREELANCE . . . .
+                            <span th:text="${about.mỵFreelance}"></span>
+                        </div>
+                        <div>
+                            ADDRESS . . . .
+                            <span th:text="${about.mỵAddress}"></span>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            <article class="about-services">
+                <h3 class="title">My Skill</h3>
+                    <a href="https://git-scm.com/" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/git-colored.svg" width="36" height="36" alt="Git" /></a>
+                    <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/javascript-colored.svg" width="36" height="36" alt="JavaScript" /></a>
+                    <a href="https://www.typescriptlang.org/" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/typescript-colored.svg" width="36" height="36" alt="TypeScript" /></a>
+                    <a href="https://developer.mozilla.org/en-US/docs/Glossary/HTML5" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/html5-colored.svg" width="36" height="36" alt="HTML5" /></a>
+                    <a href="https://www.adobe.com/uk/products/photoshop.html" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/photoshop-colored.svg" width="36" height="36" alt="Photoshop" /></a>
+                    <a href="https://www.figma.com/" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/figma-colored.svg" width="36" height="36" alt="Figma" /></a>
+            </article>
+            <article class="about-services">
+                <h3 class="title">My Services</h3>
+                <div class="line-left">
+                    <article class="line-down">
+                        <div class="fas fa-sharp fa-solid fa-wand-magic-sparkles"></div>
+                        <h4>Designer</h4>
+                        <p th:text="${about.mỵDesigner}"></p>
+                    </article>
+                    <article class="line-down">
+                        <div class="fas fa-code"></div>
+                        <h4>FE DEVELOPMENT</h4>
+                        <p th:text="${about.mỵFeDevelopment}"></p>
+                    </article>
+                </div>
+            </article>
+        </section>
+    </main>
+</div>
+<script type="text/javascript">
+    const cursor = document.querySelector(".cursor");
+
+    //theo doi chuot
+    document.addEventListener("mousemove", (e) => {
+        let x = e.pageX;
+        let y = e.pageY;
+
+        cursor.style.top = y + "px";
+        cursor.style.left = x + "px";
+        cursor.style.display = "block";
+    });
+
+    document.addEventListener("mouseout", () => {
+        cursor.style.display = "none";
+    });
+</script>
+</body>
+
+</html>
